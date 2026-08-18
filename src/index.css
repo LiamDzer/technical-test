@@ -247,32 +247,11 @@ body {
    Card List + Expense
 ========================= */
 
-/*
-   Use the class below on the parent that contains
-   Card List and Card Expense Statistics.
-*/
-
-.creditcard-bottom {
-  display: flex;
-  align-items: stretch;
-  gap: 20px;
-}
-
-.creditcard-bottom > * {
-  min-width: 0;
-}
-
-.card-list-wrapper,
 .card-expense-statistics {
-  box-sizing: border-box;
-}
-
-
-/* Card Expense */
-
-.card-expense-statistics {
-  min-height: 250px;
+  min-height: 0;
+  height: 100%;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .expense-chart {
@@ -280,12 +259,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.expense-chart svg {
+  display: block;
+  width: 150px;
+  height: 150px;
 }
 
 .expense-legend-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   row-gap: 10px;
 }
 
@@ -298,19 +283,16 @@ body {
 
 /* Card List */
 
-.card-list {
+.card-list-wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.card-list-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
 .card-list-item {
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -347,6 +329,7 @@ body {
 }
 
 .card-list-field {
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 4px;

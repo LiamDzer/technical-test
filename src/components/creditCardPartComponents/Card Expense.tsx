@@ -6,7 +6,7 @@ const CardExpenseStatistics = () => {
     { name: "MCP Bank", color: "#FFBB38", value: 85 },
   ];
 
-  const size = 220;
+  const size = 150;
   const center = size / 2;
   const maxRadius = size * 0.4;
   const maxValue = 100;

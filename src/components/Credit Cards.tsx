@@ -8,6 +8,7 @@ import {
   creditCardRed,
   creditCardYellow,
 } from "../assets/icons";
+
 import CardListItem from "./creditCardPartComponents/Card List";
 import CardExpenseStatistics from "./creditCardPartComponents/Card Expense";
 import AddNewCard from "./creditCardPartComponents/Add Card";
@@ -83,6 +84,7 @@ const CreditCard = () => {
               <div className="credit-card-top">
                 <div>
                   <small>Balance</small>
+
                   <div className="credit-card-balance">
                     {card.balance}
                   </div>
@@ -115,7 +117,9 @@ const CreditCard = () => {
       {/* Card Expense + Card List */}
       <div className="creditcard-bottom">
         <section className="card-expense-section">
-          <h6 className="section-title">Card Expense Statistics</h6>
+          <h6 className="section-title">
+            Card Expense Statistics
+          </h6>
 
           <div className="creditcard-box card-expense-box">
             <CardExpenseStatistics />
@@ -123,7 +127,9 @@ const CreditCard = () => {
         </section>
 
         <section className="card-list-section">
-          <h6 className="section-title">Card List</h6>
+          <h6 className="section-title">
+            Card List
+          </h6>
 
           <div className="card-list-wrapper">
             {cardList.map((card) => (
@@ -139,7 +145,9 @@ const CreditCard = () => {
       {/* Add New Card + Card Setting */}
       <div className="creditcard-bottom">
         <section className="add-card-section">
-          <h6 className="section-title">Add New Card</h6>
+          <h6 className="section-title">
+            Add New Card
+          </h6>
 
           <div className="creditcard-box">
             <AddNewCard />
@@ -147,7 +155,9 @@ const CreditCard = () => {
         </section>
 
         <section className="card-setting-section">
-          <h6 className="section-title">Card Setting</h6>
+          <h6 className="section-title">
+            Card Setting
+          </h6>
 
           <div className="creditcard-box">
             <CardSetting />
