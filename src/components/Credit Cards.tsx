@@ -98,19 +98,19 @@ const CreditCard = () => {
         </div>
       </section>
 
-      <div className="row mt-3">
-        <section className="col-4">
+      <div className="row mt-3 align-items-stretch">
+        <section className="col-4 d-flex flex-column">
           <h6 className="section-title">Card Expense Statistics</h6>
 
-          <div className="creditcard-box statistics">
+          <div className="creditcard-box statistics flex-grow-1">
             <CardExpenseStatistics />
           </div>
         </section>
 
-        <section className="col-8">
+        <section className="col-8 d-flex flex-column">
           <h6 className="section-title">Card List</h6>
 
-          <div className="d-flex flex-column gap-2">
+          <div className="creditcard-box card-list flex-grow-1 d-flex flex-column justify-content-between">
             {cardList.map((card) => (
               <CardListItem key={card.cardNumber} {...card} />
             ))}
@@ -118,19 +118,19 @@ const CreditCard = () => {
         </section>
       </div>
 
-      <div className="row mt-3">
-        <section className="col-8">
+      <div className="row mt-3 align-items-stretch">
+        <section className="col-8 d-flex flex-column ">
           <h6 className="section-title">Add New Card</h6>
 
-          <div className="creditcard-box">
+          <div className="creditcard-box flex-grow-1">
             <AddNewCard />
           </div>
         </section>
 
-        <section className="col-4">
+        <section className="col-4 d-flex flex-column">
           <h6 className="section-title">Card Setting</h6>
 
-          <div className="creditcard-box">
+          <div className="creditcard-box flex-grow-1">
             <CardSetting />
           </div>
         </section>
