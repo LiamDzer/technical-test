@@ -1,3 +1,4 @@
+// Credit Card - Card Expense Component
 const CardExpenseStatistics = () => {
   const expenses = [
     { name: "DBL Bank", color: "#4C78FF", value: 100 },
@@ -69,7 +70,6 @@ const CardExpenseStatistics = () => {
     <div className="content-box card-expense-statistics">
       <div className="expense-chart">
         <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
-          {/* Background circles */}
           {[0.25, 0.5, 0.75, 1].map((scale) => (
             <circle
               key={scale}
@@ -82,7 +82,6 @@ const CardExpenseStatistics = () => {
             />
           ))}
 
-          {/* Four 90° sections */}
           {sections.map((section, index) => (
             <path
               key={index}
@@ -93,7 +92,6 @@ const CardExpenseStatistics = () => {
             />
           ))}
 
-          {/* Center point */}
           <circle cx={center} cy={center} r="4" fill="#FFFFFF" />
         </svg>
       </div>

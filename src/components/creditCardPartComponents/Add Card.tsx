@@ -1,3 +1,4 @@
+// Credit Card - Add Card Component
 const AddNewCard = () => {
   return (
     <div className="content-box d-flex flex-column h-100">

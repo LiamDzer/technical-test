@@ -1,10 +1,13 @@
+// Imports
 import { useState } from "react";
 import EditProfile from "./settingPartComponent/Edit Profile";
 import Preferences from "./settingPartComponent/Preferences";
 import Security from "./settingPartComponent/Security";
 
+// Untuk Navbar
 type SettingsPage = "profile" | "preferences" | "security";
 
+// Settings Component
 const Settings = () => {
   const [activePage, setActivePage] = useState<SettingsPage>("profile");
 

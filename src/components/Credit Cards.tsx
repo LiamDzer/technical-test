@@ -14,6 +14,7 @@ import CardExpenseStatistics from "./creditCardPartComponents/Card Expense";
 import AddNewCard from "./creditCardPartComponents/Add Card";
 import CardSetting from "./creditCardPartComponents/Card Settings";
 
+// Credit Card Component
 const CreditCard = () => {
   const cards = [
     {
@@ -71,7 +72,6 @@ const CreditCard = () => {
 
   return (
     <main className="creditcard flex-grow-1">
-      {/* My Cards */}
       <section>
         <h6 className="section-title">My Cards</h6>
 
@@ -114,7 +114,6 @@ const CreditCard = () => {
         </div>
       </section>
 
-      {/* Card Expense + Card List */}
       <div className="creditcard-bottom">
         <section className="card-expense-section">
           <h6 className="section-title">
@@ -142,7 +141,6 @@ const CreditCard = () => {
         </section>
       </div>
 
-      {/* Add New Card + Card Setting */}
       <div className="creditcard-bottom">
         <section className="add-card-section">
           <h6 className="section-title">

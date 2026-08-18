@@ -1,5 +1,7 @@
+// Imports
 import { profilePicture } from "../../assets/icons";
 
+// Settings - Edit Profile Component
 const EditProfile = () => {
   return (
     <div className="edit-profile">

@@ -1,5 +1,7 @@
+// Imports
 import { useState } from "react";
 
+// Settings - Security Component
 const Security = () => {
   const [twoFactorEnabled, setTwoFactorEnabled] = useState(false);
   const [currentPassword, setCurrentPassword] = useState("");

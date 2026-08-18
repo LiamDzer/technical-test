@@ -1,3 +1,4 @@
+// Imports
 import {
   briefcaseVector,
   creditCardBlue,
@@ -8,6 +9,7 @@ import {
   shoppingBadVector,
 } from "../assets/icons";
 
+// Services Component
 const Services = () => {
   const featuredServices = [
     {

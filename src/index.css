@@ -271,6 +271,12 @@ body {
   min-width: 0;
 }
 
+.add-card-section .creditcard-box,
+.card-setting-section .creditcard-box {
+  height: calc(100% - 30px);
+  box-sizing: border-box;
+}
+
 /* Card Expense */
 
 .card-expense-box {
@@ -381,20 +387,6 @@ body {
   font-size: 14px;
   font-weight: 500;
   white-space: nowrap;
-}
-
-
-/* Add New Card + Card Setting */
-
-.add-card-section,
-.card-setting-section {
-  min-width: 0;
-}
-
-.add-card-section .creditcard-box,
-.card-setting-section .creditcard-box {
-  height: calc(100% - 30px);
-  box-sizing: border-box;
 }
 
 /* =========================

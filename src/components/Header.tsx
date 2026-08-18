@@ -1,3 +1,4 @@
+// Imports
 import {
   creditCardLogo,
   settingsVector,
@@ -5,11 +6,13 @@ import {
   profilePicture,
 } from "../assets/icons";
 
+// Props
 interface HeaderProps {
   pageName: string;
   onSettingsClick: () => void;
 }
 
+// Header Component
 const Header = ({ pageName, onSettingsClick }: HeaderProps) => {
   const formattedPageName = pageName
     .split("-")

@@ -1,5 +1,7 @@
+// Imports
 import { useState } from "react";
 
+// Settings - Preferences Component
 const Preferences = () => {
   const [digitalCurrency, setDigitalCurrency] = useState(true);
   const [merchantOrder, setMerchantOrder] = useState(false);

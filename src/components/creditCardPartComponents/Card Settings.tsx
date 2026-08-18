@@ -1,3 +1,4 @@
+// Imports
 import {
   apple,
   blockCardVector,
@@ -5,6 +6,7 @@ import {
   padlockVector,
 } from "../../assets/icons";
 
+// Credit Card - Card Settings Component
 const CardSetting = () => {
   const settings = [
     {

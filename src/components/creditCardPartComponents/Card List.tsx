@@ -1,3 +1,4 @@
+// Props
 interface CardListItemProps {
   cardType: string;
   bank: string;
@@ -7,6 +8,7 @@ interface CardListItemProps {
   logo: string;
 }
 
+// Credit Card - Card List Component
 const CardListItem = ({
   cardType,
   bank,
