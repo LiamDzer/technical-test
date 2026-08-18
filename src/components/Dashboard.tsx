@@ -1,5 +1,3 @@
-// Imports
-
 import {
   accountVector,
   creditCardVector,
@@ -10,10 +8,14 @@ import {
   servicesVector,
   settingsVector,
   transactionsVector,
+  creditCardVectorSelect,
+  servicesVectorSelect,
+  settingsVectorSelect,
 } from "../assets/icons";
 
 // Props
 interface DashboardProps {
+  currentPage: string;
   onCreditCardClick: () => void;
   onServicesClick: () => void;
   onSettingsClick: () => void;
@@ -21,6 +23,7 @@ interface DashboardProps {
 
 // Component Dashboard
 function Dashboard({
+  currentPage,
   onCreditCardClick,
   onServicesClick,
   onSettingsClick,
@@ -48,9 +51,11 @@ function Dashboard({
     },
     {
       logo: creditCardVector,
+      selectedLogo: creditCardVectorSelect,
       menuName: "Credit Cards",
       alt: "Credit Cards Logo",
       onClick: onCreditCardClick,
+      page: "credit-card",
     },
     {
       logo: loansVector,
@@ -59,9 +64,11 @@ function Dashboard({
     },
     {
       logo: servicesVector,
+      selectedLogo: servicesVectorSelect,
       menuName: "Services",
       alt: "Services Logo",
       onClick: onServicesClick,
+      page: "services",
     },
     {
       logo: myPrivelegesVector,
@@ -70,25 +77,41 @@ function Dashboard({
     },
     {
       logo: settingsVector,
+      selectedLogo:settingsVectorSelect,
       menuName: "Settings",
       alt: "Settings Logo",
       onClick: onSettingsClick,
+      page: "settings",
     },
   ];
 
   return (
     <aside>
       <nav className="d-flex flex-column">
-        {menuItems.map((menuItem) => (
-          <div
-            className="menu-item d-flex align-items-center"
-            key={menuItem.menuName}
-            onClick={menuItem.onClick}
-          >
-            <img src={menuItem.logo} alt={menuItem.alt} />
-            <span>{menuItem.menuName}</span>
-          </div>
-        ))}
+        {menuItems.map((menuItem) => {
+          const isActive = menuItem.page === currentPage;
+
+          return (
+            <div
+              className={`menu-item d-flex align-items-center ${
+                isActive ? "active" : ""
+              }`}
+              key={menuItem.menuName}
+              onClick={menuItem.onClick}
+            >
+              <img
+                src={
+                  isActive && menuItem.selectedLogo
+                    ? menuItem.selectedLogo
+                    : menuItem.logo
+                }
+                alt={menuItem.alt}
+              />
+
+              <span>{menuItem.menuName}</span>
+            </div>
+          );
+        })}
       </nav>
     </aside>
   );

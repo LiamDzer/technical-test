@@ -23,6 +23,7 @@ function App() {
         {/* Dashboard / Sidebar - ALWAYS VISIBLE */}
         <div className="flex-shrink-0 dashboard">
           <Dashboard
+            currentPage={currentPage}
             onCreditCardClick={() => setCurrentPage("credit-card")}
             onServicesClick={() => setCurrentPage("services")}
             onSettingsClick={() => setCurrentPage("settings")}

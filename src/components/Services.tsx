@@ -1,9 +1,9 @@
 import {
-  accountVector,
+  briefcaseVector,
   creditCardBlue,
   graphVector,
   lifeInsuranceVector,
-  loansVector,
+  loansVectorRed,
   shieldVector,
   shoppingBadVector,
 } from "../assets/icons";
@@ -32,7 +32,7 @@ const Services = () => {
 
   const bankServices = [
     {
-      icon: loansVector,
+      icon: loansVectorRed,
       title: "Business loans",
       description: "It is a long established",
       iconBackground: "#FFE0EB",
@@ -44,7 +44,7 @@ const Services = () => {
       item3Description: "Many publishing",
     },
     {
-      icon: accountVector,
+      icon: briefcaseVector,
       title: "Checking accounts",
       description: "It is a long established",
       iconBackground: "#FFF5D9",
@@ -80,7 +80,7 @@ const Services = () => {
       item3Description: "Many publishing",
     },
     {
-      icon: lifeInsuranceVector,
+      icon: shieldVector,
       title: "Life Insurance",
       description: "It is a long established",
       iconBackground: "#DDF7F5",
@@ -92,7 +92,7 @@ const Services = () => {
       item3Description: "Many publishing",
     },
     {
-      icon: loansVector,
+      icon: loansVectorRed,
       title: "Business loans",
       description: "It is a long established",
       iconBackground: "#FFE0EB",

@@ -19,6 +19,7 @@ export { default as homeVector } from "./Home Vector.svg";
 export { default as investmentVector } from "./Investment Vector.svg";
 export { default as lifeInsuranceVector } from "./Life Insurance Vector.svg";
 export { default as loansVector } from "./Loans Vector.svg";
+export { default as loansVectorRed } from "./Loan Vector - Red.svg"
 export { default as myPrivelegesVector } from "./My Priveleges Vector.svg";
 export { default as notificationsVector } from "./Notifications Vector.svg";
 export { default as padlockVector } from "./Padlock Vector.svg";

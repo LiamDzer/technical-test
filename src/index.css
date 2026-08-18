@@ -100,6 +100,11 @@ body {
   object-fit: contain;
 }
 
+.menu-item.active span {
+  color: #1814f3;
+  font-weight: 600;
+}
+
 /*Credit Card CSS*/
 
 .creditcard {
@@ -365,14 +370,21 @@ body {
 }
 
 .card-setting-icon {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   margin-right: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #f5f7fa;
+  border-radius: 10px;
   flex-shrink: 0;
+}
+
+.card-setting-icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .card-setting-item .fw-semibold {
@@ -387,6 +399,173 @@ body {
 .card-setting-item .btn {
   color: #343c6a;
   font-size: 18px;
+}
+
+/*Service CSS*/
+
+.services-page {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  padding: 20px 24px;
+  background-color: #f5f7fa;
+  overflow-y: auto;
+}
+
+.services-featured {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.featured-service {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+
+.featured-service-icon {
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.featured-service-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.featured-service-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.featured-service-title {
+  color: #343c6a;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.featured-service-description {
+  color: #718096;
+  font-size: 11px;
+}
+
+.services-list-section {
+  width: 100%;
+}
+
+.services-list-section .section-title {
+  margin-bottom: 12px;
+  color: #343c6a;
+  font-size: 16px;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.service-list-item {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr) auto;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+.service-list-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.service-list-icon {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.service-list-icon img {
+  width: 23px;
+  height: 23px;
+  object-fit: contain;
+}
+
+.service-list-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.service-list-title span,
+.service-list-column span {
+  color: #343c6a;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.service-list-title small,
+.service-list-column small {
+  color: #718096;
+  font-size: 10px;
+}
+
+.service-list-column {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.service-view-button {
+  padding: 8px 14px;
+  border: 1px solid #1814f3;
+  border-radius: 20px;
+  background-color: transparent;
+  color: #1814f3;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.service-view-button:hover {
+  background-color: #1814f3;
+  color: #ffffff;
+}
+
+@media (max-width: 1000px) {
+  .services-featured {
+    grid-template-columns: 1fr;
+  }
+
+  .service-list-item {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .service-list-main {
+    grid-column: 1 / -1;
+  }
 }
 
 /*Settings CSS*/
@@ -562,8 +741,6 @@ body {
   background-color: #100dd0;
 }
 
-/* Settings - Preferences */
-
 .preferences {
   padding: 38px 0 20px;
 }
@@ -616,8 +793,9 @@ body {
 .notification-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   min-height: 42px;
+  gap: 15px;
   color: #232323;
   font-size: 12px;
 }
@@ -646,7 +824,7 @@ body {
 }
 
 .notification-toggle.active {
-  background-color: #1814f3;
+  background-color: #16DBCC;
 }
 
 .notification-toggle.active span {
@@ -735,7 +913,7 @@ body {
 }
 
 .toggle.enabled {
-  background: #111827;
+  background: #16DBCC;
   justify-content: flex-end;
 }
 

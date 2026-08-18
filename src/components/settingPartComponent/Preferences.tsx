@@ -11,7 +11,7 @@ const Preferences = () => {
         <div className="preferences-field">
           <label htmlFor="currency">Currency</label>
 
-          <input id="currency" type="text" defaultValue="USD" />
+          <input id="currency" type="text" placeholder="USD" />
         </div>
 
         <div className="preferences-field">
@@ -20,7 +20,7 @@ const Preferences = () => {
           <input
             id="time-zone"
             type="text"
-            defaultValue="(GMT-12:00) International Date Line West"
+            placeholder="(GMT-12:00) International Date Line West"
           />
         </div>
       </div>
@@ -29,8 +29,6 @@ const Preferences = () => {
         <h6>Notifications</h6>
 
         <div className="notification-item">
-          <span>I send or receive digital currency</span>
-
           <button
             type="button"
             className={`notification-toggle ${digitalCurrency ? "active" : ""}`}
@@ -39,11 +37,11 @@ const Preferences = () => {
           >
             <span></span>
           </button>
+
+          <span>I send or receive digital currency</span>
         </div>
 
         <div className="notification-item">
-          <span>I receive merchant order</span>
-
           <button
             type="button"
             className={`notification-toggle ${merchantOrder ? "active" : ""}`}
@@ -52,11 +50,11 @@ const Preferences = () => {
           >
             <span></span>
           </button>
+
+          <span>I receive merchant order</span>
         </div>
 
         <div className="notification-item">
-          <span>There are recommendations for my account</span>
-
           <button
             type="button"
             className={`notification-toggle ${recommendations ? "active" : ""}`}
@@ -65,6 +63,8 @@ const Preferences = () => {
           >
             <span></span>
           </button>
+
+          <span>There are recommendations for my account</span>
         </div>
       </div>
 

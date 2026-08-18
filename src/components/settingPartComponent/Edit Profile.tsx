@@ -26,7 +26,7 @@ const EditProfile = () => {
             <input
               id="your-name"
               type="text"
-              defaultValue="Charlene Reed"
+              placeholder="Charlene Reed"
             />
           </div>
 
@@ -35,7 +35,7 @@ const EditProfile = () => {
             <input
               id="user-name"
               type="text"
-              defaultValue="Charlene Reed"
+              placeholder="Charlene Reed"
             />
           </div>
 
@@ -44,7 +44,7 @@ const EditProfile = () => {
             <input
               id="email"
               type="email"
-              defaultValue="charlenereed@gmail.com"
+              placeholder="charlenereed@gmail.com"
             />
           </div>
 
@@ -53,7 +53,7 @@ const EditProfile = () => {
             <input
               id="password"
               type="password"
-              defaultValue="1234567890"
+              placeholder="1234567890"
             />
           </div>
 
@@ -72,7 +72,7 @@ const EditProfile = () => {
             <input
               id="present-address"
               type="text"
-              defaultValue="San Jose, California, USA"
+              placeholder="San Jose, California, USA"
             />
           </div>
 
@@ -81,23 +81,23 @@ const EditProfile = () => {
             <input
               id="permanent-address"
               type="text"
-              defaultValue="San Jose, California, USA"
+              placeholder="San Jose, California, USA"
             />
           </div>
 
           <div className="edit-profile-field">
             <label htmlFor="city">City</label>
-            <input id="city" type="text" defaultValue="San Jose" />
+            <input id="city" type="text" placeholder="San Jose" />
           </div>
 
           <div className="edit-profile-field">
             <label htmlFor="postal-code">Postal Code</label>
-            <input id="postal-code" type="text" defaultValue="45962" />
+            <input id="postal-code" type="text" placeholder="45962" />
           </div>
 
           <div className="edit-profile-field">
             <label htmlFor="country">Country</label>
-            <input id="country" type="text" defaultValue="USA" />
+            <input id="country" type="text" placeholder="USA" />
           </div>
 
           <div className="edit-profile-save">
