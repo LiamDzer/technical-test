@@ -7,9 +7,15 @@ import {
 
 interface HeaderProps {
   pageName: string;
+  onSettingsClick: () => void;
 }
 
-const Header = ({ pageName }: HeaderProps) => {
+const Header = ({ pageName, onSettingsClick }: HeaderProps) => {
+  const formattedPageName = pageName
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+
   return (
     <header className="header d-flex align-items-center border-bottom">
       <div className="header-logo d-flex align-items-center">
@@ -21,7 +27,9 @@ const Header = ({ pageName }: HeaderProps) => {
         <span className="fw-bold">BankDash.</span>
       </div>
 
-      <span className="header-page-name fw-semibold">{pageName}</span>
+      <span className="header-page-name fw-semibold">
+        {formattedPageName}
+      </span>
 
       <div className="header-actions d-flex align-items-center ms-auto gap-3">
         <div className="search-box">
@@ -29,7 +37,10 @@ const Header = ({ pageName }: HeaderProps) => {
           <input type="text" placeholder="Search for something" />
         </div>
 
-        <button className="header-button rounded-circle border-0">
+        <button
+          className="header-button rounded-circle border-0"
+          onClick={onSettingsClick}
+        >
           <img src={settingsVector} alt="Settings" />
         </button>
 

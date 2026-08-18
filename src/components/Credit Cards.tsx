@@ -116,10 +116,10 @@ const CreditCard = () => {
           </div>
         </section>
 
-        <section className="col-8 d-flex flex-column">
+        <section className="col-8">
           <h6 className="section-title">Card List</h6>
 
-          <div className="creditcard-box card-list flex-grow-1 d-flex flex-column justify-content-between">
+          <div className="card-list-wrapper">
             {cardList.map((card) => (
               <CardListItem key={card.cardNumber} {...card} />
             ))}
