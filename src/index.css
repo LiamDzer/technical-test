@@ -1,0 +1,358 @@
+/*Import Font*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/*Header CSS*/
+.header {
+  min-height: 70px;
+  padding: 0 28px;
+  background-color: white;
+}
+
+.header-logo {
+  width: 105px;
+  gap: 6px;
+  color: #343c6a;
+}
+
+.header-logo-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.header-page-name {
+  margin-left: 25px;
+  color: #343c6a;
+  font-size: 20px;
+}
+
+.search-box {
+  width: 240px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  border-radius: 20px;
+  background-color: #f5f7fa;
+}
+
+.search-icon {
+  color: #718096;
+  font-size: 18px;
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 12px;
+  color: #343c6a;
+}
+
+.search-box input::placeholder {
+  color: #b0b7c3;
+}
+
+.header-button {
+  width: 40px;
+  height: 40px;
+  padding: 9px;
+  background-color: #f5f7fa;
+}
+
+.header-button img {
+  width: 100%;
+  height: 100%;
+}
+
+.profile-picture {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+/*Dashboard CSS*/
+.dashboard {
+  min-width: 12%;
+  background-color: #ffffff;
+  padding-top: 20px;
+  padding-left: 1%;
+}
+
+.menu-item {
+  height: 45px;
+  padding: 0 20px;
+  gap: 14px;
+  color: #b1b1b1;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.menu-item img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/*Credit Card CSS*/
+
+.creditcard {
+  background-color: #f5f7fa;
+  padding: 20px 24px;
+  overflow-y: auto;
+  font-family: 'Lato', sans-serif;
+}
+
+.section-title {
+  color: #343c6a;
+  margin-bottom: 10px;
+}
+
+.creditcard-box {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.my-cards {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.credit-card {
+  flex: 1;
+  min-width: 0;
+  min-height: 180px;
+
+  padding: 20px;
+  border-radius: 15px;
+
+  color: white;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.credit-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.credit-card small {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 8px;
+  opacity: 0.8;
+}
+
+.credit-card-balance {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.credit-card-details {
+  display: flex;
+  gap: 40px;
+  align-items: flex-end;
+}
+
+.credit-card-details div {
+  display: flex;
+  flex-direction: column;
+}
+
+.credit-card-details div > div {
+  font-size: 9px;
+}
+
+
+.card-number {
+  margin: 0 -20px -20px;
+  padding: 12px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: rgba(0, 0, 0, 0.08);
+  font-size: 10px;
+}
+
+.card-number img {
+  width: 30px;
+  height: auto;
+}
+
+.credit-card-top img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.card-1 {
+  background: linear-gradient(135deg, #2d60ff, #539bff);
+}
+
+.card-2 {
+  background: linear-gradient(135deg, #4c49ed, #0a06f4);
+}
+
+.card-3 {
+  background: white;
+  color: #343c6a;
+  border: 1px solid #dfeaf2;
+}
+
+.card-3 .card-number {
+  background-color: #f5f7fa;
+}
+
+.card-expense-statistics {
+  min-height: 250px;
+  padding: 20px;
+}
+
+.expense-chart {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expense-legend-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two columns */
+  grid-template-rows: auto auto;  /* two rows */
+  gap: 10px;
+}
+
+.legend-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/*Card List*/
+
+.card-list-item {
+  min-height: 65px;
+  padding: 10px 15px;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.card-list-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  margin-right: 12px;
+}
+
+.card-list-icon apple {
+  fill: #16DBCC
+}
+
+.card-list-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.card-list-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #343c6a;
+}
+
+.card-list-number {
+  font-size: 11px;
+  color: #718096;
+}
+
+.card-list-type {
+  font-size: 11px;
+  color: #718096;
+}
+
+
+/*Add New Card*/
+
+.form-description {
+  max-width: 700px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #718096;
+}
+
+.creditcard-box .form-label {
+  margin-bottom: 7px;
+  font-size: 12px;
+  color: #343c6a;
+}
+
+.creditcard-box .form-control {
+  height: 42px;
+  border: 1px solid #dfeaf2;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.creditcard-box .form-control:focus {
+  border-color: #1814f3;
+  box-shadow: none;
+}
+
+.creditcard-box .form-control::placeholder {
+  color: #b0b7c3;
+}
+
+.creditcard-box .btn-primary {
+  padding: 10px 28px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1814f3;
+  font-size: 12px;
+}
+
+
+/*Credit Card Setting*/
+
+.card-setting-item {
+  min-height: 55px;
+}
+
+.card-setting-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f7fa;
+  flex-shrink: 0;
+}
+
+.card-setting-item .fw-semibold {
+  font-size: 12px;
+  color: #343c6a;
+}
+
+.card-setting-item small {
+  font-size: 10px;
+}
+
+.card-setting-item .btn {
+  color: #343c6a;
+  font-size: 18px;
+}
