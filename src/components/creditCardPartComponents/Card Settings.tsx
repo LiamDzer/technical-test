@@ -47,13 +47,15 @@ const CardSetting = () => {
             className="card-setting-item d-flex align-items-center"
             key={setting.title}
           >
-            <div className="card-setting-icon rounded-circle">
-              <img src={setting.logo} />
+            <div
+              className="card-setting-icon"
+              style={{ backgroundColor: setting.color }}
+            >
+              <img src={setting.logo} alt="" />
             </div>
 
             <div>
               <div className="fw-semibold">{setting.title}</div>
-
               <small className="text-muted">{setting.description}</small>
             </div>
 

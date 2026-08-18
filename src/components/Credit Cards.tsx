@@ -68,25 +68,30 @@ const CreditCard = () => {
     },
   ];
 
-  // Credit Card Component
   return (
     <main className="creditcard flex-grow-1">
+      {/* My Cards */}
       <section>
         <h6 className="section-title">My Cards</h6>
 
-        <div className="d-flex gap-3">
+        <div className="my-cards">
           {cards.map((card, index) => (
-            <div className={`credit-card card-${index + 1}`} key={index}>
-              <div className="d-flex justify-content-between">
+            <div
+              className={`credit-card card-${index + 1}`}
+              key={index}
+            >
+              <div className="credit-card-top">
                 <div>
                   <small>Balance</small>
-                  <div>{card.balance}</div>
+                  <div className="credit-card-balance">
+                    {card.balance}
+                  </div>
                 </div>
 
                 <img src={card.chip} alt="" />
               </div>
 
-              <div className="d-flex gap-5">
+              <div className="credit-card-details">
                 <div>
                   <small>CARD HOLDER</small>
                   <div>{card.cardHolder}</div>
@@ -98,7 +103,7 @@ const CreditCard = () => {
                 </div>
               </div>
 
-              <div className="card-number d-flex justify-content-between align-items-center">
+              <div className="card-number">
                 <span>{card.number}</span>
                 <img src={card.decor} alt="" />
               </div>
@@ -107,39 +112,44 @@ const CreditCard = () => {
         </div>
       </section>
 
-      <div className="row mt-3 align-items-stretch">
-        <section className="col-4 d-flex flex-column">
+      {/* Card Expense + Card List */}
+      <div className="creditcard-bottom">
+        <section className="card-expense-section">
           <h6 className="section-title">Card Expense Statistics</h6>
 
-          <div className="creditcard-box statistics flex-grow-1">
+          <div className="creditcard-box card-expense-box">
             <CardExpenseStatistics />
           </div>
         </section>
 
-        <section className="col-8">
+        <section className="card-list-section">
           <h6 className="section-title">Card List</h6>
 
           <div className="card-list-wrapper">
             {cardList.map((card) => (
-              <CardListItem key={card.cardNumber} {...card} />
+              <CardListItem
+                key={card.cardNumber}
+                {...card}
+              />
             ))}
           </div>
         </section>
       </div>
 
-      <div className="row mt-3 align-items-stretch">
-        <section className="col-8 d-flex flex-column ">
+      {/* Add New Card + Card Setting */}
+      <div className="creditcard-bottom">
+        <section className="add-card-section">
           <h6 className="section-title">Add New Card</h6>
 
-          <div className="creditcard-box flex-grow-1">
+          <div className="creditcard-box">
             <AddNewCard />
           </div>
         </section>
 
-        <section className="col-4 d-flex flex-column">
+        <section className="card-setting-section">
           <h6 className="section-title">Card Setting</h6>
 
-          <div className="creditcard-box flex-grow-1">
+          <div className="creditcard-box">
             <CardSetting />
           </div>
         </section>
