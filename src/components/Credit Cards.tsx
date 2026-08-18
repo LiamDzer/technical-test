@@ -2,8 +2,11 @@
 import {
   chipCardLogoGrey,
   chipCardLogoWhite,
+  creditCardBlue,
   creditCardDecorGrey,
   creditCardDecorWhite,
+  creditCardRed,
+  creditCardYellow,
 } from "../assets/icons";
 import CardListItem from "./creditCardPartComponents/Card List";
 import CardExpenseStatistics from "./creditCardPartComponents/Card Expense";
@@ -40,22 +43,28 @@ const CreditCard = () => {
 
   const cardList = [
     {
-      cardType: "Credit Card",
+      cardType: "Secondary",
+      bank: "DBL Bank",
       cardNumber: "**** 1234",
-      cardName: "DBL Bank",
+      cardHolder: "William",
       cardColor: "#E7EDFF",
+      logo: creditCardBlue,
     },
     {
-      cardType: "Credit Card",
+      cardType: "Secondary",
+      bank: "BRC Bank",
       cardNumber: "**** 5678",
-      cardName: "BRC Bank",
+      cardHolder: "Michel",
       cardColor: "#FFE0EB",
+      logo: creditCardRed,
     },
     {
-      cardType: "Credit Card",
+      cardType: "Secondary",
+      bank: "ABM Bank",
       cardNumber: "**** 9012",
-      cardName: "ABM Bank",
+      cardHolder: "Edward",
       cardColor: "#FFF5D9",
+      logo: creditCardYellow,
     },
   ];
 

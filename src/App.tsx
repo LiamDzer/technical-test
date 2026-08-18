@@ -13,7 +13,7 @@ function App() {
           <Dashboard/>
         </div>
         
-        <div className="flex-grow-1">
+        <div className="d-flex flex-grow-1 min-vh-0">
           <CreditCard/>
         </div>
       </div>

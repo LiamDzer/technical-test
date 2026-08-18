@@ -1,18 +1,19 @@
-import { creditCardVector } from "../../assets/icons";
-
 interface CardListItemProps {
   cardType: string;
+  bank: string;
   cardNumber: string;
-  cardName: string;
+  cardHolder: string;
   cardColor: string;
+  logo: string;
 }
-
 
 const CardListItem = ({
   cardType,
+  bank,
   cardNumber,
-  cardName,
+  cardHolder,
   cardColor,
+  logo,
 }: CardListItemProps) => {
   return (
     <div className="card-list-item d-flex align-items-center">
@@ -20,15 +21,32 @@ const CardListItem = ({
         className="card-list-icon d-flex align-items-center justify-content-center"
         style={{ backgroundColor: cardColor }}
       >
-        <img src={creditCardVector} />
+        <img src={logo} alt="" />
       </div>
 
       <div className="card-list-info">
-        <span className="card-list-name">{cardName}</span>
-        <span className="card-list-number">{cardNumber}</span>
+        <div className="card-list-field">
+          <span className="card-list-label">Card Type</span>
+          <span className="card-list-value">{cardType}</span>
+        </div>
+
+        <div className="card-list-field">
+          <span className="card-list-label">Bank</span>
+          <span className="card-list-value">{bank}</span>
+        </div>
+
+        <div className="card-list-field">
+          <span className="card-list-label">Card Number</span>
+          <span className="card-list-value">{cardNumber}</span>
+        </div>
+
+        <div className="card-list-field">
+          <span className="card-list-label">Name on Card</span>
+          <span className="card-list-value">{cardHolder}</span>
+        </div>
       </div>
 
-      <span className="card-list-type ms-auto">{cardType}</span>
+      <span className="card-list-details">View Details</span>
     </div>
   );
 };
